@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Create Skeleton Extension",
+  "version": "1.0",
+  "description": "A simple Chrome extension",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Click me!"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "content_security_policy": {
+    "script-src": ["self", "unsafe-inline"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

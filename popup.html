@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Extension Popup</title>
+    <style>
+      body {
+        width: 400px;
+        text-align: center;
+      }
+    </style>
+
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>快速生成骨架图</h1>
+      <div class="title">目标元素：</div>
+      <input
+        id="selector-input"
+        placeholder="id、className、tagName"
+        value="#app"
+      />
+      <div class="title">html:</div>
+      <textarea name="" id="html-area" cols="40" rows="10"> </textarea>
+      <div class="title">style:</div>
+      <textarea name="" id="style-area" cols="40" rows="10"> </textarea>
+      <button id="submit-btn">生成骨架屏代码</button>
+    </div>
+  </body>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #submit-btn {
+      margin-top: 20px;
+      width: 120px;
+    }
+
+    .title {
+      text-align: left;
+      font-size: 20px;
+    }
+
+    #selector-input {
+      height: 40px;
+      width: 100%;
+    }
+  </style>
+</html>
